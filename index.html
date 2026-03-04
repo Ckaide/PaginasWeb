@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NEON JUMP: Infinite Rush</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Hello</h1>
+
+    <div class="game-container">
+        <h1>NEON JUMP</h1>
+        <div class="score">Puntos: <span id="score">0</span></div>
+
+        <div class="game" id="game">
+            <div class="character" id="character"></div>
+            <div class="obstacle" id="obstacle"></div>
+        </div>
+        <div class="difficulty-container">
+    <label>Dificultad:</label>
+    <select id="difficulty">
+        <option value="easy">Fácil</option>
+        <option value="normal" selected>Normal</option>
+        <option value="hard">Difícil</option>
+    </select>
+</div>
+
+        <div class="game-over" id="gameOver">
+            <h2>GAME OVER</h2>
+            <button onclick="restartGame()">Reiniciar</button>
+        </div>
+
+        <p class="instructions">Presiona ESPACIO o ↑ para saltar</p>
+    </div>
+<audio id="bgMusic" loop>
+    <source src="assets/Electroman Adventures.mp3" type="audio/mpeg">
+</audio>
+
+<script src="js/game.js"></script>
+
+</audio>
 </body>
 </html>
